@@ -41,7 +41,7 @@ def plot_surface(theta,r,R_s,Z_s, savefig = True):
     if savefig :
         plt.savefig("miller.png")  # Now is saved to the current working directory, i.e. where cd is pointing
 
-def main(A,kappa,R0,delta,savefig = True):
+def main(A = 2.2,kappa = 1.5,R0 = 2.5,delta = 0.3,savefig = True):
     '''
     This function calls flux_surface, captures the outputs and then plots the results
     

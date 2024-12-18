@@ -7,12 +7,14 @@ requires = [
 
 [project]
 name = "miller"
-version = "0.1.0"
 dependencies = [
     "matplotlib>=3.8.4",
     "numpy>=1.26.4"
 ]
 dynamic = ["version"]
+
+[project.scripts]
+miller = "miller:main"
 
 [project.optional-dependencies]
 tests = ['pytest']
