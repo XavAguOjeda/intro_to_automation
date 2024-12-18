@@ -9,7 +9,8 @@ requires = [
 name = "miller"
 dependencies = [
     "matplotlib>=3.8.4",
-    "numpy>=1.26.4"
+    "numpy>=1.26.4",
+    "tomli"
 ]
 dynamic = ["version"]
 
