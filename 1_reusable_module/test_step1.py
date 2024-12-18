@@ -7,7 +7,7 @@ import sys
 import pytest
 
 top_level_dir = pathlib.Path(__file__).parent.parent
-script = "miller.py"
+script = top_level_dir / "miller.py"
 
 
 def already_moved_script() -> bool:

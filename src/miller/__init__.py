@@ -1,5 +1,8 @@
 from numpy import *
 import matplotlib.pyplot as plt
+from importlib.metadata import version, PackageNotFoundError
+
+__version__ = version(__name__)  # __name__ is "miller"
 
 A = 2.2
 kappa = 1.5
@@ -39,8 +42,17 @@ def plot_surface(theta,r,R_s,Z_s, savefig = True):
         plt.savefig("miller.png")  # Now is saved to the current working directory, i.e. where cd is pointing
 
 def main(A,kappa,R0,delta,savefig = True):
+    '''
+    This function calls flux_surface, captures the outputs and then plots the results
+    
+    
+    Arguments: 
+    ---------
+        numerical: A, kappa, R0, delta
+    
+    '''
     theta,r,R_s,Z_s = flux_surface(A,kappa,R0,delta)
     plot_surface(theta,r,R_s,Z_s, savefig)
 
-if __name__ = "__main__":
-    main()
+if __name__ == "__main__":
+    main(A,kappa,R0,delta)
